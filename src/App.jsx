@@ -1,5 +1,4 @@
-import TCBlogo from './assets/TCBlogo.png'
-import myVideo from './assets/TCBWebsiteVideo.mp4'
+import TCBlogo from './assets/NewTCBLogo.png'
 import instagramLogo from './assets/Instagramlogo.png'
 import facebookLogo from './assets/Facebooklogo.png'
 import tiktokLogo from './assets/tiktoklogo.avif'
@@ -18,9 +17,14 @@ function App() {
           <img src={TCBlogo} className="tcb" alt="TCB logo" />
         </div>
         <div className="video">
-          <video className="video-element" controls src={myVideo}>
-        Your browser does not support the video tag.
-      </video>
+          <div className="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/lsR9c0QzneU"
+              title="The Texas Crowdfunded Blockbuster trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
 

@@ -25,7 +25,8 @@
 .hero img {
   width: clamp(180px, 30vw, 320px);
   height: auto;
-  max-width: 20%;
+  max-width: 30%;
+
 }
 
 .Heading {
@@ -48,11 +49,19 @@
   align-items: center;
 }
 
-.video video {
+.video-frame {
   width: 60%;
-  height: auto;
-  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .section2 {
@@ -80,11 +89,12 @@
 }
 
 .section2-text {
+  font-family: 'Courier New', Courier, monospace;
   font-size: clamp(1.1rem, 2vw, 1.6rem);
   font-weight: bold;
   text-align: center;
   margin: 0;
-  width: 100%;
+  width: 90%;
 }
 
 .Socials {
@@ -128,6 +138,12 @@
   height: clamp(64px, 9vw, 92px);
   object-fit: contain;
   display: block;
+}
+
+.social-link.tiktok .social-icon,
+.social-link.youtube .social-icon {
+  width: clamp(78px, 10vw, 108px);
+  height: clamp(78px, 10vw, 108px);
 }
 
 .social-link {
@@ -179,5 +195,9 @@
 
   .Socials {
     aspect-ratio: auto;
+  }
+
+  .video-frame {
+    width: 100%;
   }
 }
